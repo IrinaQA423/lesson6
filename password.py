@@ -1,8 +1,4 @@
-password = input("Введите  пароль: ")
-
-
 def main():
-
     def is_very_long(password):
         return len(password) > 12
 
@@ -18,6 +14,8 @@ def main():
     def has_symbols(password):
         return any(not i.isdigit() and not i.isalpha()for i in password)
 
+    password = input("Введите  пароль: ")
+
     score = 0
     list_foo = [
         has_digit,
@@ -30,7 +28,7 @@ def main():
     for foo in list_foo:
         if foo(password):
             score += 2
-    print("Рейтинг пароля: ", score)
+            print("Рейтинг пароля: ", score)
 
 
 if __name__ == '__main__':
